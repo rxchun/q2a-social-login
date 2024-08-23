@@ -1,0 +1,14 @@
+{
+    "name": "pupi/sl",
+    "type": "project",
+    "version": "1.0.0",
+    "require": {
+        "php": ">=7.4.0",
+        "hybridauth/hybridauth": "^3.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "PUPI_SL\\": "src/"
+        }
+    }
+}

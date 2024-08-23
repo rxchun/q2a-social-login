@@ -1,0 +1,14 @@
+{
+    "name": "Social Login",
+    "uri": "",
+    "description": "Allows to login to Q2A using external authentication methods",
+    "version": "1.0.0",
+    "date": "2024-08-20",
+    "author": "Gabriel Zanetti",
+    "author_uri": "https://www.question2answer.org/qa/user/pupi1985",
+    "license": "GPLv3",
+    "update_uri": "",
+    "min_q2a": "1.8.0",
+    "min_php": "7.4.0",
+    "load_order": "after_db_init"
+}
