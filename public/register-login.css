@@ -13,7 +13,6 @@
 .pupi_sl_text-divider-container {
     display: flex;
     justify-content: center;
-    margin-top: 1.5rem;
     width: 100%;
 }
 
@@ -49,4 +48,14 @@ hr.pupi_sl_text-divider::before {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+}
+
+.pupi-sl-note {
+    font-size: 85%;
+    opacity: .75;
+}
+
+/* Polaris theme - remove duplicate Login/Register */
+.logReg-link-container {
+    display: none;
 }
