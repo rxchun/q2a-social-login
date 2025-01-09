@@ -17,7 +17,11 @@ class Config
 
     const LANG_ID_ADMIN_HTML_BEFORE_RESITER_TITLE_LABEL = 'admin_html_before_register_title_label';
 
-    const LANG_ID_CONTINUE_WITH_PROVIDER = 'continue_with_provider';
+    const LANG_ID_ADMIN_LABEL_DISABLE_CORE_REGISTRATION = 'admin_label_disable_core_registration';
+
+    const LANG_ID_REGISTER_WITH_PROVIDER = 'register_with_provider';
+    const LANG_ID_LOGIN_WITH_PROVIDER = 'login_with_provider';
+    const LANG_ID_CONTINUE_WITH_PROVIDER = 'continue_with_provider'; // Deprecated
 
     const LANG_ID_ADMIN_LABEL_PROVIDER_ENABLED = 'admin_label_provider_enabled';
     const LANG_ID_ADMIN_LABEL_PROVIDER_APP_KEY = 'admin_label_provider_app_key';
@@ -25,4 +29,6 @@ class Config
 
     const LANG_ID_ALREADY_REGISTERED_LOGIN = 'already_registered_login';
     const LANG_ID_DONT_HAVE_ACCOUNT_REGISTER = 'dont_have_account_register';
+
+    const LANG_ID_REGISTER_NOTE = 'register_note';
 }

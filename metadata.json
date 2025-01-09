@@ -1,14 +1,16 @@
 {
     "name": "Social Login",
-    "uri": "",
-    "description": "Allows to login to Q2A using external authentication methods",
-    "version": "1.0.0",
-    "date": "2024-08-20",
+    "uri": "https://github.com/GATEOverflow/q2a-social-login",
+    "description": "Allows users to Log In using external authentication methods (Social Media Login)",
+    "version": "1.0.1",
+    "date": "2025-01-09",
+	"released": "2024-08-20",
     "author": "Gabriel Zanetti",
     "author_uri": "https://www.question2answer.org/qa/user/pupi1985",
     "license": "GPLv3",
-    "update_uri": "",
-    "min_q2a": "1.8.0",
+    "update_uri": "https://raw.githubusercontent.com/GATEOverflow/q2a-social-login/master/metadata.json",
+    "max_q2a": "1.8.8",
+	"min_q2a": "1.8.0",
     "min_php": "7.4.0",
     "load_order": "after_db_init"
 }

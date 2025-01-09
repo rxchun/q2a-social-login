@@ -67,10 +67,10 @@ class PUPI_SL_Admin
      *
      * @return array
      */
-    private function getStringField($setting, $langId, $rows = 1)
+    private function getStringField($setting, $langId, $rows = 0)
     {
         return [
-            'label' => pupi_sl()->util()->langHtml($langId),
+            'label' => qa_html(pupi_sl()->util()->langHtml($langId)),
             'tags' => 'name="' . qa_html(pupi_sl()->util()->addPrefix($setting)) . '"',
             'value' => qa_html(pupi_sl()->util()->getSetting($setting)),
             'rows' => $rows,
@@ -107,6 +107,16 @@ class PUPI_SL_Admin
     }
 
     /**
+     * @return array
+     */
+    private function addSpacerField()
+    {
+        return [
+            'type' => 'blank',
+        ];
+    }
+
+    /**
      * @param array $options
      * @param string $selectedKey
      * @param string $fieldSetting
@@ -134,6 +144,10 @@ class PUPI_SL_Admin
     private function getFieldsProviders()
     {
         $result = [];
+
+        // Add option to Disable Q2A Core Registration
+        $result[] = $this->getBooleanField('disable_core_registration', 'admin_label_disable_core_registration');
+        $result[] = $this->addSpacerField();
 
         $providerModel = new ProviderModel();
         foreach (ProviderModel::PROVIDERS as $provider) {
@@ -207,6 +221,9 @@ class PUPI_SL_Admin
 
     private function saveSettingsProviders()
     {
+        // Save new manual added setting in -> getFieldsProviders()
+        $this->saveIntegerSetting('disable_core_registration');
+
         $providerModel = new ProviderModel();
         foreach (ProviderModel::PROVIDERS as $provider) {
             foreach (ProviderModel::SETTING_IDS as $settingId) {
